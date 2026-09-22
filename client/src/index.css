@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Design tokens (RGB triplets so Tailwind opacity modifiers work) ---------- */
+:root {
+  /* Light: cool mist */
+  --bg: 236 240 248;
+  --surface: 255 255 255;
+  --surface-2: 243 245 252;
+  --surface-3: 231 235 246;
+  --line: 221 226 240;
+  --ink: 19 21 42;
+  --sub: 100 107 137;
+  --brand: 109 86 250;
+  --brand-2: 20 184 166;
+  --coral: 244 63 94;
+  color-scheme: light;
+}
+.dark {
+  /* Dark: deep ink-indigo */
+  --bg: 8 9 20;
+  --surface: 15 17 35;
+  --surface-2: 23 26 49;
+  --surface-3: 34 38 68;
+  --line: 45 50 84;
+  --ink: 234 236 251;
+  --sub: 141 148 182;
+  --brand: 139 120 255;
+  --brand-2: 45 212 191;
+  --coral: 255 107 138;
+  color-scheme: dark;
+}
+
+@layer base {
+  * { @apply border-line; }
+  html, body, #root { height: 100%; }
+  body {
+    @apply bg-app font-sans text-ink antialiased;
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior: none;
+  }
+  h1, h2, h3, .font-display { font-family: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif; letter-spacing: -0.02em; }
+  :focus-visible { outline: 2px solid rgb(var(--brand)); outline-offset: 2px; border-radius: 8px; }
+  ::selection { background: rgb(var(--brand) / 0.3); }
+  button { -webkit-user-select: none; user-select: none; }
+}
+
+@layer components {
+  /* Glassmorphism surfaces */
+  .glass {
+    background: rgb(var(--surface) / 0.62);
+    -webkit-backdrop-filter: blur(18px) saturate(150%);
+    backdrop-filter: blur(18px) saturate(150%);
+    border: 1px solid rgb(var(--line) / 0.7);
+  }
+  .glass-strong {
+    background: rgb(var(--surface) / 0.86);
+    -webkit-backdrop-filter: blur(26px) saturate(170%);
+    backdrop-filter: blur(26px) saturate(170%);
+    border: 1px solid rgb(var(--line) / 0.9);
+  }
+  /* Brand gradients */
+  .bg-brand-gradient { background-image: linear-gradient(135deg, rgb(var(--brand)) 0%, rgb(86 112 255) 55%, rgb(var(--brand-2)) 130%); }
+  .bg-bubble-own { background-image: linear-gradient(140deg, rgb(var(--brand)) 0%, rgb(84 104 255) 100%); }
+  .text-gradient { background-image: linear-gradient(120deg, rgb(var(--brand)), rgb(var(--brand-2))); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .ring-brand { box-shadow: 0 0 0 2px rgb(var(--surface)), 0 0 0 4px rgb(var(--brand)); }
+
+  .field {
+    @apply w-full rounded-xl border border-line bg-surface-2 px-3.5 py-2.5 text-sm text-ink placeholder:text-sub/70 transition;
+  }
+  .field:focus { outline: none; border-color: rgb(var(--brand)); box-shadow: 0 0 0 3px rgb(var(--brand) / 0.18); }
+
+  .skeleton { position: relative; overflow: hidden; @apply rounded-lg bg-surface-3/70; }
+  .skeleton::after {
+    content: ''; position: absolute; inset: 0; transform: translateX(-100%);
+    background: linear-gradient(90deg, transparent, rgb(var(--ink) / 0.07), transparent);
+    animation: shimmer 1.6s infinite;
+  }
+}
+
+@layer utilities {
+  .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+  .pt-safe { padding-top: env(safe-area-inset-top); }
+  .h-screen-safe { height: 100dvh; }
+}
+
+/* ---------- Custom scrollbars ---------- */
+* { scrollbar-width: thin; scrollbar-color: rgb(var(--sub) / 0.35) transparent; }
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb { background: rgb(var(--sub) / 0.28); border-radius: 999px; border: 2px solid transparent; background-clip: content-box; }
+*::-webkit-scrollbar-thumb:hover { background: rgb(var(--sub) / 0.5); background-clip: content-box; border: 2px solid transparent; }
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* Subtle chat wallpaper */
+.chat-wallpaper {
+  background-color: rgb(var(--bg));
+  background-image:
+    radial-gradient(60rem 30rem at 10% -10%, rgb(var(--brand) / 0.10), transparent 60%),
+    radial-gradient(50rem 30rem at 110% 110%, rgb(var(--brand-2) / 0.08), transparent 60%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}

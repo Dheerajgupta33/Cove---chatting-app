@@ -1,0 +1,13 @@
+{
+  "name": "cove",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Cove - real-time chat (MongoDB, Express, React, Node, Socket.IO)",
+  "scripts": {
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "build:client": "npm --prefix client run build",
+    "seed:admin": "npm --prefix server run seed:admin"
+  }
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Cove - Real-time chat for people and teams</title>
+    <meta name="description" content="Cove is a fast, calm chat app: direct messages, group rooms, voice notes, polls, scheduled messages and a built-in AI assistant." />
+    <meta name="theme-color" content="#0a0b16" />
+    <link rel="canonical" href="/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Cove" />
+    <meta property="og:title" content="Cove - Real-time chat for people and teams" />
+    <meta property="og:description" content="Direct messages, group rooms, voice notes, polls and an AI assistant in one calm workspace." />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Apply the saved theme before first paint to avoid a flash -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('cove-theme') || 'system';
+          var dark = t === 'dark' || (t === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          document.documentElement.classList.toggle('dark', dark);
+        } catch (e) {}
+      })();
+    </script>
+
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"WebApplication","name":"Cove","applicationCategory":"CommunicationApplication","operatingSystem":"Web","description":"Real-time chat with groups, voice notes, polls and an AI assistant.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>Cove needs JavaScript to run. Please enable it in your browser.</noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

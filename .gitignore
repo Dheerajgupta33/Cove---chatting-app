@@ -1,0 +1,9 @@
+node_modules
+.env
+.env.*
+.env.example
+dist
+uploads
+*.log
+.DS_Store
+.README.md

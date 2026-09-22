@@ -1,288 +1,342 @@
 <div align="center">
 
-💬 Cove
-A modern real-time chat application built with the MERN stack + Socket.IO ⚡
-Status: The project has been statically checked, but it still needs an end-to-end integration test after dependencies are installed. 🧪
+# 💬 Cove
+
+### A modern real-time chat application built with the MERN stack + Socket.IO ⚡
+
+[![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-Database-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+[![Socket.IO](https://img.shields.io/badge/Socket.IO-Real--Time-010101?style=for-the-badge&logo=socketdotio&logoColor=white)](https://socket.io/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-UI-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+
+> 🌊 **Cove** is a feature-rich real-time chat platform built to feel like a real product, not just a basic messaging demo.
 
 </div>
 
-👋 About Cove
-Cove is a full-stack chat application built to feel like a real product, not just a simple messaging demo. It brings together direct messaging, group chats, voice notes, file sharing, polls, scheduled messages, an AI assistant, notifications, and moderation tools in one place.
+---
 
-The goal of this project was to practise building the parts of a real-time application that are usually harder than sending a message: authentication, socket events, read receipts, presence, uploads, permissions, background jobs, and admin controls.
+## 👋 About Cove
 
-🏝️ Cove is a space for conversations — quick messages, group planning, shared files, and everything in between.
+Cove is a full-stack real-time chat application built with the MERN stack and Socket.IO. It brings direct messaging, group chats, voice notes, file sharing, polls, scheduled messages, an AI assistant, notifications, and moderation tools together in one place.
 
-✨ What it can do
-💬 Messaging
-⚡ Real-time direct and group messages
+The main goal of this project was to build something beyond a simple chat box. I wanted to understand how real-time systems work when features like authentication, typing indicators, read receipts, media uploads, user presence, roles, scheduled tasks, and admin controls are involved.
 
-⌨️ Live typing indicators
+> 🏝️ Cove is a space for conversations — quick messages, group planning, shared files, and everything in between.
 
-🟢 Online/offline presence and last-seen status
+---
 
-✅ Delivered and seen receipts
+## ✨ Features
 
-😀 Emoji reactions
+### 💬 Messaging
 
-✏️ Edit and delete messages
+- ⚡ Real-time direct and group messaging
+- ⌨️ Live typing indicators
+- 🟢 Online/offline presence and last-seen status
+- ✅ Delivered and seen receipts
+- 😀 Emoji reactions
+- ✏️ Edit and delete messages
+- ↩️ Reply to, forward, pin, and star messages
+- 🔎 Search chats and hashtags
+- ♾️ Cursor-based message history loading
+- ⏰ Schedule messages for later
 
-↩️ Reply to, forward, pin, and star messages
+### 🎉 Media and Collaboration
 
-🔎 Search chats and hashtags
+- 🎙️ Record and send voice messages
+- 🖼️ Share images and videos
+- 📎 Upload documents and files with drag and drop
+- 📊 Create single-choice and multiple-choice polls
+- 📣 Mention group members with autocomplete
+- 📦 Export chat backups as JSON
 
-♾️ Cursor-based message history loading
+### 👥 Accounts and Social Features
 
-⏰ Schedule messages for later
+- 🔐 Email and username login/registration
+- 🔄 JWT access and refresh token authentication
+- 🌐 Google Sign-In support
+- 📧 Email verification and password reset flows
+- 🧑 Profile, avatar, bio, and custom status
+- 🤝 Friend requests
+- 🚫 Block and unblock users
+- ⭐ Favorite chats and messages
+- 🗂️ Archive and unarchive conversations
 
-🎉 Media and collaboration
-🎙️ Record and send voice messages
+### 🤖 AI, Calls, and Admin Tools
 
-🖼️ Share images and videos
+- 🤖 Built-in **Cove AI** assistant
+- 📞 Voice and video call interface
+- 🎥 Camera controls, mute controls, and screen sharing
+- 🛡️ Admin roles and user moderation
+- 🚩 Report users and messages
+- 📋 Audit logs for admin activity
+- 📈 Admin analytics dashboard
+- 🌙 Dark/light theme support
+- 🔔 Notification and privacy settings
 
-📎 Upload documents and files with drag and drop
+---
 
-📊 Create single-choice or multiple-choice polls
+## 🧰 Tech Stack
 
-📣 Mention group members with autocomplete
+| Area | Technologies |
+| --- | --- |
+| 🎨 Frontend | React 18, Vite, Tailwind CSS, Framer Motion |
+| 🧠 State Management | Redux Toolkit, React Redux |
+| 🚀 Backend | Node.js, Express.js |
+| 🗄️ Database | MongoDB, Mongoose |
+| ⚡ Real-Time Communication | Socket.IO |
+| 🔐 Authentication | JWT, bcrypt, Google OAuth |
+| ✅ Validation | Zod |
+| ☁️ File Storage | Cloudinary with local fallback |
+| 📬 Email | Nodemailer |
+| 🤖 AI | Anthropic Messages API |
+| 🌍 Deployment | Vercel, Render, Railway |
 
-👥 Accounts and social features
-🔐 Email/username login and registration
+---
 
-🔄 Access and refresh token authentication
+## 🏗️ Architecture
 
-🌐 Google Sign-In support
+Cove is divided into two independent applications:
 
-📧 Email verification and password reset flows
-
-🧑 Profile, avatar, bio, and custom status
-
-🤝 Friend requests
-
-🚫 Block and unblock users
-
-⭐ Favorites and archived conversations
-
-📦 Export chat backups as JSON
-
-🤖 AI, calls, and admin tools
-🤖 Built-in Cove AI chat assistant
-
-📞 Voice and video call interface with Socket.IO signalling
-
-🛡️ Admin roles, user moderation, and bans
-
-🚩 User and message reporting workflow
-
-📋 Audit logs for administrative actions
-
-📈 Admin analytics dashboard
-
-🌙 Dark/light mode, notification preferences, and privacy settings
-
-🧰 Tech stack
-Area	Tools used
-🎨 Frontend	React 18, Vite, Tailwind CSS, Framer Motion
-🧠 State management	Redux Toolkit, React Redux
-🚀 Backend	Node.js, Express.js
-🗄️ Database	MongoDB, Mongoose
-⚡ Real-time	Socket.IO
-🔐 Authentication	JWT, bcrypt, Google OAuth
-✅ Validation	Zod
-☁️ File storage	Cloudinary, with local fallback in development
-📬 Email	Nodemailer, with console fallback in development
-🤖 AI	Anthropic Messages API
-🌍 Deployment	Vercel, Render, or Railway
-🏗️ How it works
-Cove has separate frontend and backend applications:
-
-text
-
+```text
 cove/
 ├── server/   # Express API, MongoDB, Socket.IO, authentication, jobs
 └── client/   # React + Vite frontend and Redux state
-🌐 REST API handles authentication, validation, database operations, file uploads, and chat actions.
+```
 
-⚡ Socket.IO handles instant events such as messages, typing, presence, notifications, receipts, and call signalling.
+- 🌐 **REST API** handles authentication, validation, database operations, uploads, and chat actions.
+- ⚡ **Socket.IO** handles instant events such as new messages, typing, presence, notifications, delivery status, read receipts, and call signalling.
+- 🗄️ **MongoDB** stores users, messages, groups, conversations, notifications, reports, settings, and logs.
 
-🗄️ MongoDB stores users, messages, conversations, groups, reports, settings, and system logs.
+### Socket Rooms
 
-Socket rooms
-text
+```text
+user:<id>    # Every active connection of a user
+conv:<id>    # All members of a conversation
+admins       # Moderators and administrators
+```
 
-user:<id>    # Every active connection for a user
-conv:<id>    # Everyone in a conversation
-admins       # Moderators and admins
-📡 A message is saved through the API first, then instantly broadcast to the members of that conversation through Socket.IO.
+> 📡 Messages are saved through the REST API first and then broadcast instantly through Socket.IO.
 
-🚀 Getting started
-📌 Requirements
+---
+
+## 🚀 Getting Started
+
+### 📌 Requirements
+
 Before running the project, make sure you have:
 
-Node.js 18 or newer
+- Node.js 18 or newer
+- npm
+- MongoDB locally or a MongoDB Atlas connection string
 
-npm
+Optional services:
 
-MongoDB locally or a MongoDB Atlas connection string
+- ☁️ Cloudinary for production media storage
+- 📬 SMTP credentials for email verification and password reset
+- 🌐 Google OAuth credentials
+- 🤖 Anthropic API key for live Cove AI responses
 
-Optional integrations:
+---
 
-☁️ Cloudinary for production media storage
+## 📥 Installation
 
-📬 SMTP credentials for email verification and password reset emails
+Clone the repository:
 
-🌐 Google OAuth credentials
-
-🤖 Anthropic API key for live Cove AI replies
-
-📥 Installation
-bash
-
+```bash
 git clone <your-repository-url>
 cd cove
+```
+
+Install dependencies for both frontend and backend:
+
+```bash
 npm run install:all
-Create local environment files:
+```
 
-bash
+Create environment files:
 
+```bash
 cp server/.env.example server/.env
 cp client/.env.example client/.env
-At minimum, add your MongoDB connection string and two strong JWT secrets to server/.env.
+```
 
-🔒 Never push your .env file, JWT secrets, API keys, or database credentials to GitHub.
+At minimum, add your MongoDB connection string and two strong JWT secrets in `server/.env`.
 
-▶️ Run the app
+> 🔒 Never upload `.env` files, API keys, JWT secrets, or database credentials to GitHub.
+
+---
+
+## ▶️ Run Locally
+
 Open two terminals.
 
-Terminal 1 — server
+### Terminal 1 — Start Server
 
-bash
-
+```bash
 npm run dev:server
-Terminal 2 — client
+```
 
-bash
+### Terminal 2 — Start Client
 
+```bash
 npm run dev:client
-Service	Default URL
-🖥️ Client	http://localhost:5173
-🛠️ Server	http://localhost:5000
-Create your first admin account if needed:
+```
 
-bash
+| Service | Default URL |
+| --- | --- |
+| 🖥️ Client | `http://localhost:5173` |
+| 🛠️ Server | `http://localhost:5000` |
 
+Create the first admin account:
+
+```bash
 npm run seed:admin
-🧩 Development fallbacks
-Cove can still run while optional services are missing:
+```
 
-📬 No SMTP? Verification and reset links appear in the server console.
+---
 
-☁️ No Cloudinary? Uploads are saved locally in development.
+## 🧩 Development Fallbacks
 
-🤖 No Anthropic key? Cove AI responds in demo mode.
+Cove can still run if some optional services are not configured:
 
-🌐 No Google client ID? The Google sign-in button stays hidden.
+- 📬 No SMTP? Password reset and verification links appear in the server console.
+- ☁️ No Cloudinary? Uploads are saved locally during development.
+- 🤖 No Anthropic API key? Cove AI works in demo mode.
+- 🌐 No Google Client ID? The Google Sign-In button stays hidden.
 
-🔐 Security highlights
-Security is built into the project instead of being added as an afterthought:
+---
 
-🔑 Short-lived access tokens
+## 🔐 Security Features
 
-🔄 Rotating refresh tokens stored as SHA-256 hashes
+Security is built into the project from the beginning:
 
-🕵️ Refresh-token reuse detection
+- 🔑 Short-lived JWT access tokens
+- 🔄 Rotating refresh tokens
+- 🕵️ Refresh-token reuse detection
+- 🍪 `httpOnly` and secure cookies
+- 🚦 API, authentication, message, and upload rate limiting
+- ✅ Zod validation for request body, params, and query values
+- 🧹 NoSQL injection protection
+- 🛡️ XSS sanitization and Helmet security headers
+- 🌐 Strict CORS configuration
+- 📁 File-type allow-list and 25 MB upload limit
+- 👁️ Privacy controls for presence, last seen, and read receipts
+- 🧾 Audit logs for admin actions
 
-🍪 httpOnly, secure cookie handling
+---
 
-🚦 Rate limits for APIs, authentication, messages, and uploads
+## 🌍 Deployment
 
-✅ Zod validation for request bodies, params, and queries
+### 🖥️ Backend — Render or Railway
 
-🧹 NoSQL-injection and XSS sanitization
+Deploy the `server` directory and configure:
 
-🪖 Helmet security headers and strict CORS rules
-
-📁 File-type allow-list with a 25 MB upload limit
-
-👁️ Privacy controls for presence, last-seen, and read receipts
-
-🧾 Audit logs for moderation activity
-
-🌍 Deployment
-🖥️ Backend — Render or Railway
-Deploy the server application and set these environment variables:
-
-text
-
+```text
 MONGO_URI
 CLIENT_URL
 SERVER_URL
-Also add Cloudinary, SMTP, Google OAuth, and Anthropic variables only if you are using those services.
+```
 
-🌐 Frontend — Vercel
-Deploy the client directory using the Vite preset, then configure:
+Add other values only if you use those services:
 
-text
+```text
+CLOUDINARY_CLOUD_NAME
+CLOUDINARY_API_KEY
+CLOUDINARY_API_SECRET
+SMTP_HOST
+SMTP_PORT
+SMTP_USER
+SMTP_PASS
+GOOGLE_CLIENT_ID
+ANTHROPIC_API_KEY
+```
 
+### 🌐 Frontend — Vercel
+
+Deploy the `client` directory with the Vite framework preset.
+
+Add:
+
+```text
 VITE_API_URL=<your-deployed-server-url>
-🍪 Cookie note: Different client/server domains can make refresh cookies behave like third-party cookies. For a more reliable production setup, use a common custom domain such as app.example.com and api.example.com.
+```
 
-🧪 First-run checklist
-Before calling the project production-ready, test the following:
+> 🍪 **Cookie note:** If the frontend and backend are deployed on different domains, refresh cookies may be treated as third-party cookies. For better production reliability, use a shared custom domain such as `app.example.com` and `api.example.com`.
 
+---
 
-👤 Register two accounts in different browsers
+## 🧪 First-Run Checklist
 
+Before considering the project production-ready, test these items:
 
-💬 Send messages and confirm real-time delivery
+- [ ] 👤 Register two accounts in separate browsers
+- [ ] 💬 Send messages and verify real-time delivery
+- [ ] ⌨️ Test typing indicators
+- [ ] 🟢 Test presence and last-seen updates
+- [ ] ✅ Test delivered and read receipts
+- [ ] 📎 Upload an image, document, and voice note
+- [ ] 👥 Create a group and test mentions
+- [ ] 📊 Create and vote in a poll
+- [ ] 📌 Pin a message
+- [ ] ⏰ Schedule a message
+- [ ] 🔁 Restart the server and verify client reconnection
+- [ ] 🛡️ Create an admin user and open the admin dashboard
+- [ ] 🔐 Test authentication and cookies after deployment
 
+---
 
-⌨️ Test typing indicators, presence, and read receipts
+## 🚧 Current Limitation
 
+### 📞 Voice and Video Calls
 
-📎 Upload an image, document, and voice note
+The call interface is implemented with:
 
+- 📲 Ringing and incoming call alerts
+- ✅ Accept and decline actions
+- 🎙️ Mute/unmute controls
+- 📷 Camera toggle
+- 🖥️ Screen sharing
+- 📡 Socket.IO call signalling
+- 👀 Local camera, microphone, and screen previews
 
-👥 Create a group and test mentions, pins, polls, and scheduled messages
+However, live audio and video are **not yet streamed to the other participant**.
 
+The remaining work is to add WebRTC using:
 
-🔁 Restart the server and confirm the client reconnects properly
+```text
+RTCPeerConnection
+Offer / Answer exchange
+ICE candidates
+TURN server for production NAT traversal
+```
 
+> 🧩 The signalling system is ready. WebRTC peer-to-peer media streaming is the next major feature.
 
-🛡️ Seed an admin account and check the admin dashboard
+---
 
+## 📈 Future Improvements
 
-🔐 Verify cookies, authentication, uploads, and errors after deployment
+- 🔄 Add Socket.IO Redis adapter for multi-server scaling
+- 🧰 Add BullMQ for high-volume scheduled-message processing
+- 🔎 Use MongoDB text search or Atlas Search for large datasets
+- 📞 Complete WebRTC voice/video streaming
+- 🧪 Add API tests, Socket.IO tests, and end-to-end tests
+- 📱 Improve mobile responsiveness
+- 🌐 Add more OAuth providers
 
-🚧 Current limitation
-📞 Voice/video calls
-The call UI, local microphone/camera previews, ringing flow, accept/decline actions, mute controls, screen sharing, and Socket.IO signalling are in place.
+---
 
-However, real audio/video is not streamed to the other participant yet. The next step is to add WebRTC on the client using RTCPeerConnection, exchange offer/answer and ICE-candidate data through the existing call:signal event, and configure a TURN server for production connectivity.
+## 📁 Project Structure
 
-🧩 The signalling path is ready; WebRTC media transport is the remaining piece.
-
-📈 Future improvements
-🔄 Add the Socket.IO Redis adapter for multi-server scaling
-
-🧰 Use BullMQ or another queue for very high volumes of scheduled messages
-
-🔎 Move from regex search to MongoDB text search or Atlas Search for large datasets
-
-📞 Finish WebRTC media streaming and TURN-server support
-
-🧪 Add automated API, socket, and end-to-end tests
-
-📁 Project structure
-text
-
+```text
 server/src/
 ├── config/         # Environment validation and database connection
 ├── models/         # Mongoose schemas
 ├── controllers/    # Route handlers
 ├── routes/         # API endpoints
-├── middleware/     # Auth, validation, security, upload, and error handlers
-├── services/       # Messages, AI, storage, notifications, logging
+├── middleware/     # Auth, validation, security, uploads, errors
+├── services/       # Messaging, AI, storage, notifications, logging
 ├── socket/         # Socket authentication and real-time events
 ├── jobs/           # Scheduled-message worker
 └── validators/     # Zod schemas
@@ -295,44 +349,52 @@ client/src/
 ├── components/     # Shared, chat, dashboard, admin, and layout UI
 ├── pages/          # Application pages
 └── lib/            # Utilities and helpers
-🎯 Why I built this
-I built Cove to practise making a complete full-stack application where multiple systems need to work together: React UI, Express APIs, MongoDB data models, authentication, real-time events, file uploads, AI integration, moderation, and deployment.
+```
 
-It helped me understand that a messaging app is more than a message input and a database. Things like unread counts, user presence, permissions, scheduled tasks, delivery states, and secure session handling all need careful coordination between the frontend and backend.
+---
 
-🗺️ Roadmap
+## 🎯 Why I Built This
 
-Core real-time messaging
+I built Cove to practise creating a complete full-stack application where many systems need to work together properly.
+
+This project helped me understand that a chat application is not only about sending messages. Real-time presence, unread messages, delivery status, read receipts, permissions, user roles, scheduled tasks, media handling, secure sessions, and moderation all need coordination between the frontend, backend, database, and Socket.IO server.
+
+---
+
+## 🗺️ Roadmap
+
+- [x] Core real-time messaging
+- [x] Groups, reactions, polls, and file uploads
+- [x] JWT authentication with refresh-token rotation
+- [x] AI assistant
+- [x] Admin dashboard and reporting system
+- [x] Call UI and Socket.IO signalling
+- [ ] WebRTC peer-to-peer audio/video streaming
+- [ ] Redis-backed Socket.IO scaling
+- [ ] Automated testing suite
+- [ ] Better mobile optimization
+
+---
+
+## 📄 License
+
+Choose and add a license before making the repository public.
+
+A common option for portfolio projects is the **MIT License**.
+
+---
+
+## 🙋 Author
+
+**Dheeraj Gupta**
 
 
-Groups, reactions, polls, and media uploads
+---
 
+<div align="center">
 
-Authentication and refresh-token rotation
+Made with ☕, JavaScript, React, Node.js, MongoDB, and Socket.IO ⚡
 
+⭐ If you like this project, consider giving the repository a star.
 
-AI assistant and admin tools
-
-
-Call UI and signalling
-
-
-WebRTC peer-to-peer media streaming
-
-
-Redis-backed Socket.IO scaling
-
-
-Automated test suite
-
-📄 License
-Choose and add a license before making the repository public. The MIT License is a common choice for portfolio projects.
-
-🙋 Author
-Your Name
-
-💻 GitHub: @your-username
-
-🌐 Portfolio: your-portfolio-url
-
-📧 Email: your-email@example.com
+</div>

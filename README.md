@@ -376,14 +376,6 @@ This project helped me understand that a chat application is not only about send
 
 ---
 
-## 📄 License
-
-Choose and add a license before making the repository public.
-
-A common option for portfolio projects is the **MIT License**.
-
----
-
 ## 🙋 Author
 
 **Dheeraj Gupta**
